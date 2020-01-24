@@ -19,13 +19,14 @@ public class CourseReaderActivity extends AppCompatActivity implements CourseRea
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_course_reader);
+
         CourseReaderViewModel viewModel = new ViewModelProvider(this, new ViewModelProvider.NewInstanceFactory()).get(CourseReaderViewModel.class);
 
         Bundle bundle = getIntent().getExtras();
         if (bundle != null) {
             String courseId = bundle.getString(EXTRA_COURSE_ID);
             if (courseId != null) {
-                viewModel.setCourseId(courseId);
+                viewModel.setSelectedCourse(courseId);
                 populateFragment();
             }
         }
