@@ -28,8 +28,8 @@ public class ModuleListAdapter extends RecyclerView.Adapter<ModuleListAdapter.Mo
 
     void setModules(List<ModuleEntity> listModules) {
         if (listModules == null) return;
-        listModules.clear();
-        listModules.addAll(listModules);
+        this.listModules.clear();
+        this.listModules.addAll(listModules);
     }
 
     @NonNull

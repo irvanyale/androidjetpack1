@@ -28,8 +28,8 @@ public class AcademyAdapter extends RecyclerView.Adapter<AcademyAdapter.CourseVi
 
     void setCourses(List<CourseEntity> listCourses) {
         if (listCourses == null) return;
-        listCourses.clear();
-        listCourses.addAll(listCourses);
+        this.listCourses.clear();
+        this.listCourses.addAll(listCourses);
     }
 
     @NonNull
